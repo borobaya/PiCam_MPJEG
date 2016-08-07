@@ -22,7 +22,6 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate, NSURLSessio
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
         // Edit width and height, so streaming is not too slow
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: config, delegate: self, delegateQueue: nil)
@@ -37,7 +36,6 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate, NSURLSessio
         self.view.addSubview(imageView)
         
         self.endMarkerData = NSData(bytes: [0xFF, 0xD9] as [UInt8], length: 2)
-        
     }
     
     override func didReceiveMemoryWarning() {
